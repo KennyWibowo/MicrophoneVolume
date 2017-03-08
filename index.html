@@ -42,7 +42,7 @@ navigator.webkitGetUserMedia({audio: true, video: false}, function(stream) {
 
         var average = values / length;
         
-        context.innerHTML = Math.floor(average * 2);
+        document.body.style.backgroundColor = "rgb(" + (255 - Math.floor(average * 2)) + "," + 255 + "," + (255 - Math.floor(average * 2)) + ")";
     }
 }, function(err) {
     console.log('error', err);
